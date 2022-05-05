@@ -42,6 +42,7 @@ h4{
 .footer div {
   flex: 1;
   margin-top: 1em;
+  margin-bottom: 1em;
   padding: 1em;
   background-color: #C81A6E;
   
