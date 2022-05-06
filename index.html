@@ -25,7 +25,7 @@
               <template x-if="!checkout">
                 <button @click="small++" style="padding: .5em;">+</button> </template><span x-text="small"></span>
                 <template x-if="!checkout">
-                <button @click="small--" style="padding: .5em;">-</button></template>
+                <button @click="small--" style="padding: .6em;">-</button></template>
               <span> R<span x-text="(small * 48.99).toFixed(2)"></span></span>
             </div>
           </template>
@@ -34,7 +34,7 @@
               Medium:
               <template x-if="!checkout"><button @click="medium++" style="padding: .5em;">+</button></template><span x-text="medium"></span >
                 <template x-if="!checkout">
-                <button @click="medium--" style="padding: .5em;">-</button></template>
+                <button @click="medium--" style="padding: .6em;">-</button></template>
               <span> R<span x-text="(medium * 78.99).toFixed(2)"></span></span>
             </div>
           </template>
@@ -42,15 +42,15 @@
           <div class="large-cart">
             Large: <template x-if="!checkout"></template><button @click="large++" style="padding: .5em;">+</button><span x-text="large"></span>
             <template x-if="!checkout" >
-                <button @click="large--" style="padding: .5em;">-</button></template>
+                <button @click="large--" style="padding: .6em;">-</button></template>
             <span> R<span x-text="(large * 114.99).toFixed(2)"></span></span>
           </div>
         </template>
        
        
         <div>Total: R<span x-text="total"></span></div>
-        <template x-if="!checkout">
-          <button @click="checkout=!checkout" >Checkout</button>
+        <template x-if="!checkout" style="padding: .5em;">
+          <button @click="checkout=!checkout" style="padding: .5em;">Checkout</button>
         </template>
         <template x-if="checkout">
           <label >Amount to be paid: R<input
@@ -72,7 +72,7 @@
           <span>
             <div style="color: red">insufficient funds</div>
             <button @click="small=0; medium=0; large=0; checkout=false;">
-              Cancel order
+              Cancel Order
             </button>
           </span>
         </template>
